@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/relativelayoutdistrict"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvDistrictName"
+            android:textColor="#fff"
+            tools:text="LakShadWeePSSS"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            style="@style/Totalfontstyle"
+            android:textSize="16dp"
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"></TextView>
+
+<LinearLayout
+    android:layout_width="53dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginRight="6dp"
+    android:id="@+id/casesdistrict"
+    android:layout_toRightOf="@+id/tvDistrictName">
+
+    <TextView
+        android:id="@+id/TodayCase"
+        android:layout_marginLeft="0dp"
+        android:textColor="#ff745b"
+        tools:text="+9999"
+        android:layout_gravity="right"
+        style="@style/Labelfontstyle"
+        android:textSize="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:id="@+id/TotalCase"
+            android:layout_marginLeft="0dp"
+            android:textColor="@color/colortotalconfirmed"
+            android:layout_gravity="right"
+            tools:text="80000"
+            style="@style/Totalfontstyle"
+            android:textSize="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+
+
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/recovereddistrict"
+    android:layout_toRightOf="@+id/casesdistrict"
+    android:layout_marginRight="6dp"
+    android:orientation="vertical"
+    android:layout_width="53dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/TodayRecovere"
+        android:layout_marginLeft="0dp"
+        android:textColor="#a9ff3c"
+        tools:text="17"
+        android:layout_gravity="right"
+        style="@style/Labelfontstyle"
+        android:textSize="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+    <TextView
+        android:id="@+id/TotalRecovere"
+        android:layout_marginLeft="0dp"
+        android:textColor="@color/colortotalrecovered"
+        tools:text="80000"
+        android:layout_gravity="right"
+        style="@style/Totalfontstyle"
+        android:textSize="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_toRightOf="@+id/recovereddistrict"
+    android:orientation="vertical"
+    android:layout_width="53dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/TodayDeath"
+        android:layout_marginLeft="0dp"
+        android:textColor="#b0b0b0"
+        android:layout_gravity="right"
+        tools:text="1117"
+        style="@style/Labelfontstyle"
+        android:textSize="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:id="@+id/TotalDeath"
+            android:layout_marginLeft="0dp"
+            android:layout_gravity="right"
+            android:textColor="@color/colortotaldeaths"
+            tools:text="8000"
+            style="@style/Totalfontstyle"
+            android:textSize="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+
+</LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

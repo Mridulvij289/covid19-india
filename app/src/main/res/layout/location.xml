@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/default_background">
+
+    <TextView
+        android:id="@+id/text"
+        android:textColor="#fff"
+        style="@style/Labelfontstyle"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="Click Below to get Current Statistics of Covid-19 in Your District"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/text"
+        android:layout_centerHorizontal="true"
+        android:textSize="22dp"
+        android:text="Locate"
+        android:textColor="#fff"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorPrimaryDark"
+
+        android:id="@+id/button_location">
+
+
+    </Button>
+    <ProgressBar
+        android:layout_width="30dp"
+        android:id="@+id/progress_circular_location"
+        android:layout_marginTop="5dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_height="30dp"></ProgressBar>
+
+    <TextView
+        android:id="@+id/TextLatLog"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:textColor="#fff"
+        style="@style/Labelfontstyle"
+        android:layout_below="@+id/button_location"
+        android:textSize="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <TextView
+        android:id="@+id/textA"
+        android:textColor="#fff"
+        style="@style/Labelfontstyle"
+        android:layout_below="@+id/TextLatLog"
+        android:gravity="center"
+        android:text="You Currently Live In"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+
+    <TextView
+        android:id="@+id/textAddress1"
+        android:textColor="#fff"
+        style="@style/Labelfontstyle"
+        android:layout_below="@+id/textA"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+
+    <TextView
+        android:id="@+id/textAddress"
+        android:textColor="#fff"
+        style="@style/Labelfontstyle"
+        android:layout_below="@+id/textAddress1"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/linearlayoutstatename"
+        android:layout_below="@+id/textAddress"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/districtname"
+            style="@style/Totalfontstyle"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:layout_marginTop="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="AGRA"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/linearlayouthotspot"
+        android:layout_below="@+id/linearlayoutstatename"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/hotspot"
+            style="@style/Totalfontstyle"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="AGRA"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/hotspotcolor"
+            style="@style/Totalfontstyle"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_width="30dp"
+            android:layout_height="27dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearcases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/linearlayouthotspot">
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Labelfontstyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="total cases"
+                android:textColor="#fff"
+                android:textSize="12sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/districtcases"
+                style="@style/Totalfontstyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:textColor="@color/colortotalconfirmed"
+                android:textSize="26sp"
+                tools:text="800">
+
+            </TextView>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="total Deaths"
+                android:textColor="#fff"
+                style="@style/Labelfontstyle"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/districtdeaths"
+                android:textColor="@color/colortotaldeaths"
+                android:layout_marginTop="-10dp"
+                tools:text="800"
+                style="@style/Totalfontstyle"
+                android:textSize="26sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="total Recovered"
+                android:textColor="#fff"
+                style="@style/Labelfontstyle"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/districtrecovered"
+                android:textColor="@color/colortotalrecovered"
+                android:layout_marginTop="-10dp"
+                tools:text="800"
+                style="@style/Totalfontstyle"
+                android:textSize="26sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Labelfontstyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="total Active"
+                android:textColor="#fff"
+                android:textSize="12sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/districtactive"
+                style="@style/Totalfontstyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:textColor="@color/colortotalactive"
+                android:textSize="26sp"
+                tools:text="800">
+
+            </TextView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lineartoday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/linearcases">
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Labelfontstyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="today cases"
+                android:textColor="#fff"
+                android:textSize="12sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/districttcases"
+                style="@style/Totalfontstyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:textColor="#ff745b"
+                android:textSize="26sp"
+                tools:text="800">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="today Deaths"
+                android:textColor="#fff"
+                style="@style/Labelfontstyle"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/districttdeaths"
+                android:textColor="#b0b0b0"
+                android:layout_marginTop="-10dp"
+                tools:text="16"
+                style="@style/Totalfontstyle"
+                android:textSize="26sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </LinearLayout>
+
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Today Recovered"
+                android:textColor="#fff"
+                style="@style/Labelfontstyle"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/districttrecovered"
+                android:textColor="#a9ff3c"
+                android:layout_marginTop="-10dp"
+                tools:text="16"
+                style="@style/Totalfontstyle"
+                android:textSize="26sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

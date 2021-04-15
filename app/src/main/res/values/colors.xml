@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#222222</color>
+    <color name="colorPrimaryDark">#002d72</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="colortotalconfirmed">#e60000</color>
+    <color name="colortotaldeaths">#999999</color>
+    <color name="colortotalrecovered">#B736E410</color>
+    <color name="colortotalactive">#D6049FFF</color>
+    <color name="selected_background">#001242</color>
+    <color name="default_background">#00656E</color>
+    <color name="background">#08012C</color>
+    <color name="transparent">#00000000</color>
+</resources>

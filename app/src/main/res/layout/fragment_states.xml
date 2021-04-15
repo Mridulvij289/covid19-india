@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/default_background"
+    android:id="@+id/statefragment"
+    tools:context=".ui.states.StateFragment">
+
+    <LinearLayout
+        android:id="@+id/linearlayouttotalstates"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="center">
+        <TextView
+            android:textColor="#fff"
+            style="@style/Totalfontstyle"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:id="@+id/totalstates"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:text="28 States and 7 Union \n Territories"/>
+    </LinearLayout>
+
+  <!--  <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barchart"
+        android:layout_below="@+id/linearlayouttotalstates"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+</!-->
+   <androidx.recyclerview.widget.RecyclerView
+       android:layout_below="@id/linearlayouttotalstates"
+       android:id="@+id/rvcovidstate"
+       tools:listitem="@layout/item_list_covid_state"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
+    <ProgressBar
+        android:id="@+id/progress_circular_state"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/progress"
+        android:indeterminate="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+   <!-- <Button
+        android:id="@+id/Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearlayouttotalstates"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="#fff"
+
+        android:background="@color/colorPrimaryDark"
+        android:text="Districts"></Button> <!-->
+</RelativeLayout>
